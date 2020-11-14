@@ -1,0 +1,21 @@
+function processData(input) {
+  let words = input.split('\n').slice(1).map(splitString);
+  //This just prints the result in the specified format
+  words.forEach(e => console.log(e.join(' ')));
+}
+
+function splitString(str) {
+  let even = '';
+  let odd = '';
+
+  for(let i = 0; i < str.length; i++) {
+    if(i%2 === 0) {
+        even += str[i];
+    }
+    else {
+        odd += str[i];
+    }
+  }
+
+  return [even, odd];
+}
