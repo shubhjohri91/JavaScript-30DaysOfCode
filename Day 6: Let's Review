@@ -1,21 +1,13 @@
 function processData(input) {
-  let words = input.split('\n').slice(1).map(splitString);
-  //This just prints the result in the specified format
-  words.forEach(e => console.log(e.join(' ')));
+    let inputCopy = input.split('\n').slice(1);
+    console.log(inputCopy)
+    inputCopy.forEach((str) => {
+      let evenStr = '';
+      let oddStr = '';
+        for(let i = 0; i < str.length; i++) {
+            i % 2 ? oddStr += str[i] : evenStr += str[i];
+        }
+        console.log(`${evenStr} ${oddStr}`);
+    });
 }
 
-function splitString(str) {
-  let even = '';
-  let odd = '';
-
-  for(let i = 0; i < str.length; i++) {
-    if(i%2 === 0) {
-        even += str[i];
-    }
-    else {
-        odd += str[i];
-    }
-  }
-
-  return [even, odd];
-}
