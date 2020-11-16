@@ -1,0 +1,6 @@
+function main() {
+    let n = parseInt(readLine(), 10);
+    let arr = readLine().split(' ').map(arrTemp => parseInt(arrTemp, 10))
+    arr = arr.reverse().join(' ');
+    console.log(arr)
+}
