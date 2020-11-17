@@ -1,0 +1,7 @@
+function main() {
+    const n = parseInt(readLine(), 10);
+    var binArray = n.toString(2).split('0')
+    var max = Math.max(...binArray);
+    // console.log(max)
+    console.log(max.toString().length);
+}
