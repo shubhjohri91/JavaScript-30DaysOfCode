@@ -1,0 +1,20 @@
+function processData(input) {
+    input = input.split("\n")
+    var N = parseInt(input[0])
+    
+    var phonebook = [];
+    for(var i = 0; i < N; i++){
+        var line = input[i+1]
+        line = line.split(" ")
+        phonebook[line[0]] = line[1]
+    }
+    
+    for (var i = N+1; i < input.length; i++){
+        var num = (phonebook[input[i]])
+        if (num !== undefined){
+            console.log(input[i]+"="+num)
+        } else {
+            console.log('Not found')
+        }
+    }
+} 
